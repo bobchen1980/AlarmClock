@@ -1,0 +1,418 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MagAlarmRules_DIALOG DIALOGEX 0, 0, 406, 254
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Set Alarm Rules (less than 100)"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Apply",IDOK,327,233,72,14
+    PUSHBUTTON      "Add New Alarm",IDC_BUTTON1,327,7,72,14
+    PUSHBUTTON      "Delete Selected",IDC_BUTTON2,327,63,72,14
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SORTASCENDING | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,314,240
+    PUSHBUTTON      "Delete All",IDC_BUTTON3,327,91,72,14
+    PUSHBUTTON      "Batch Add New",IDC_BUTTON4,327,35,72,14
+END
+
+IDD_AddRule_DIALOG DIALOGEX 0, 0, 264, 186
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add Alarm"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Add",IDOK,7,165,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,207,165,50,14
+    CONTROL         "",IDC_DATETIMEPICKER1,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,107,20,45,15
+    CONTROL         "",IDC_DATETIMEPICKER2,"SysDateTimePick32",DTS_RIGHTALIGN | WS_TABSTOP,35,20,61,15
+    GROUPBOX        "Alarm Time",IDC_STATIC,7,7,250,36
+    GROUPBOX        "Alarm Action",IDC_STATIC,7,52,250,110
+    CONTROL         "Play Sound",IDC_CHECK_SOUND,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,35,74,51,10
+    CONTROL         "Change Skin",IDC_CHECK_SKIN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,35,95,55,10
+    CONTROL         "Pop Text",IDC_CHECK_POPTEXT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,35,116,45,10
+    CONTROL         "Execute plugin",IDC_CHECK_PLUGIN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,35,137,63,10
+    EDITTEXT        IDC_EDIT_TEXT,96,114,137,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_SOUND,96,71,137,40,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_SKIN,96,92,137,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_PLUGIN,96,135,137,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Today",IDC_BUTTON_TODAY,174,21,50,14
+END
+
+IDD_DIALOG_ADDBULK DIALOGEX 0, 0, 441, 271
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Batch add alarms (Each cycle of the two alarms)"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Batch Add",IDOK,7,250,50,14
+    PUSHBUTTON      "Close",IDCANCEL,384,250,50,14
+    CONTROL         "",IDC_DATETIMEPICKER1,"SysDateTimePick32",DTS_RIGHTALIGN | WS_TABSTOP,57,15,88,15
+    CONTROL         "",IDC_DATETIMEPICKER2,"SysDateTimePick32",DTS_RIGHTALIGN | WS_TABSTOP,197,15,93,15
+    LTEXT           "Start Time",IDC_STATIC,19,18,34,8
+    LTEXT           "End Time",IDC_STATIC,164,18,30,8
+    GROUPBOX        "Alarm Action Rule 1",IDC_STATIC,7,58,210,93
+    EDITTEXT        IDC_EDIT1,351,16,40,14,ES_AUTOHSCROLL
+    CONTROL         "Play Sound",IDC_CHECK_SOUND,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,71,51,10
+    CONTROL         "Change Skin",IDC_CHECK_SKIN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,92,55,10
+    CONTROL         "Pop Text",IDC_CHECK_POPTEXT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,114,45,10
+    CONTROL         "Execute plugin",IDC_CHECK_PLUGIN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,135,63,10
+    EDITTEXT        IDC_EDIT_TEXT,75,111,137,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_SOUND,75,68,137,40,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_SKIN,75,90,137,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_PLUGIN,75,132,137,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Time Setup",IDC_STATIC,7,3,427,53
+    LTEXT           "Cycle interval",IDC_STATIC,301,18,44,8
+    EDITTEXT        IDC_EDIT2,49,37,29,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,128,37,29,14,ES_AUTOHSCROLL
+    LTEXT           "Offset 1",IDC_STATIC,19,39,28,8
+    LTEXT           "S",IDC_STATIC,393,18,8,8
+    LTEXT           "Offset 2",IDC_STATIC,98,39,28,8
+    LTEXT           "S",IDC_STATIC,80,39,8,8
+    GROUPBOX        "Alarm Action Rule 2",IDC_STATIC,7,153,210,93
+    CONTROL         "Play Sound",IDC_CHECK_SOUND1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,166,51,10
+    CONTROL         "Change Skin",IDC_CHECK_SKIN1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,187,55,10
+    CONTROL         "Pop Text",IDC_CHECK_POPTEXT1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,209,45,10
+    CONTROL         "Execute plugin",IDC_CHECK_PLUGIN1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,230,63,10
+    EDITTEXT        IDC_EDIT_TEXT1,75,206,137,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_SOUND1,75,163,137,40,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_SKIN1,75,185,137,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_PLUGIN1,75,227,137,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "S",IDC_STATIC,162,40,8,8
+    GROUPBOX        "Alarm Action Rule 3",IDC_STATIC,222,58,210,93
+    CONTROL         "Play Sound",IDC_CHECK_SOUND2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,232,70,51,10
+    CONTROL         "Change Skin",IDC_CHECK_SKIN2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,232,92,55,10
+    CONTROL         "Pop Text",IDC_CHECK_POPTEXT2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,232,113,45,10
+    CONTROL         "Execute plugin",IDC_CHECK_PLUGIN2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,232,134,63,10
+    EDITTEXT        IDC_EDIT_TEXT2,293,110,137,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_SOUND2,294,68,137,40,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_SKIN2,294,89,137,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_PLUGIN2,294,132,137,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Alarm Action Rule 4",IDC_STATIC,222,153,210,93
+    CONTROL         "Play Sound",IDC_CHECK_SOUND3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,232,165,51,10
+    CONTROL         "Change Skin",IDC_CHECK_SKIN3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,232,187,55,10
+    CONTROL         "Pop Text",IDC_CHECK_POPTEXT3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,232,208,45,10
+    CONTROL         "Execute plugin",IDC_CHECK_PLUGIN3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,232,229,63,10
+    EDITTEXT        IDC_EDIT_TEXT3,294,205,137,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_SOUND3,294,163,137,40,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_SKIN3,294,184,137,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_PLUGIN3,294,227,137,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT4,209,37,29,14,ES_AUTOHSCROLL
+    LTEXT           "Offset 3",IDC_STATIC,179,39,28,8
+    LTEXT           "S",IDC_STATIC,243,40,8,8
+    EDITTEXT        IDC_EDIT5,289,37,29,14,ES_AUTOHSCROLL
+    LTEXT           "Offset 4",IDC_STATIC,259,39,28,8
+    LTEXT           "S",IDC_STATIC,323,40,8,8
+END
+
+IDD_DIALOG_PASS DIALOGEX 0, 0, 174, 66
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Please input password"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,45,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,117,45,50,14
+    EDITTEXT        IDC_EDIT1,7,19,160,14,ES_PASSWORD | ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_MagAlarmRules_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 399
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 247
+    END
+
+    IDD_AddRule_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 257
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 179
+    END
+
+    IDD_DIALOG_ADDBULK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 434
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 264
+    END
+
+    IDD_DIALOG_PASS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 167
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 59
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_POPBG_RESOURCE      BITMAP                  "res\\Popbg.bmp"
+IDB_YELLOW_CLOCK_FACE   BITMAP                  "res\\Yellow.bmp"
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 176, 60
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About..."
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_MAIN,11,9,20,20,SS_CENTERIMAGE,WS_EX_TRANSPARENT
+    LTEXT           "ECQ Alarm Clock Version 1.0",IDC_STATIC,40,13,114,8
+    LTEXT           "Copyright 2008 by Chen Xiaoliang",IDC_STATIC,40,27,135,8
+    DEFPUSHBUTTON   "OK",IDOK,135,43,41,14,WS_GROUP
+END
+
+IDD_ECQAlarmClock_DIALOG DIALOGEX 0, 0, 92, 70
+STYLE DS_SETFONT | WS_POPUP | WS_VISIBLE
+EXSTYLE WS_EX_APPWINDOW
+CLASS "ECQAlarmClock"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "",IDC_FRAME,0,0,90,70
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 57
+    END
+
+    IDD_ECQAlarmClock_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 85
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 63
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_DARKBLUE_CLOCK_FACE BITMAP                  "res\\Blue.bmp"
+IDB_GREEN_CLOCK_FACE    BITMAP                  "res\\Green.bmp"
+IDB_RED_CLOCK_FACE      BITMAP                  "res\\Red.bmp"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "#ifdef _VC60\r\n"
+    "/////////////////////////////////////////////////////////////////////////////\r\n"
+    "//\r\n"
+    "// 24\r\n"
+    "//\r\n"
+    "1                      24      MOVEABLE PURE   ""app.manifest""\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\Main.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Article", "www.ecq.name"
+            VALUE "E-mail", "brygid@163.com"
+            VALUE "FileDescription", "ECQAlarmClock exe"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "LegalCopyright", "Copyright 2008 Chen Xiaoliang"
+            VALUE "OriginalFilename", "ECQAlarmClock.exe"
+            VALUE "ProductName", "ECQAlarmClock"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR ACCELERATORS 
+BEGIN
+    VK_ADD,         ID_INCREASE_TRANSPARENCY, VIRTKEY, CONTROL, NOINVERT
+    VK_F11,         ID_ADVANCE_HOUR,        VIRTKEY, CONTROL, NOINVERT
+    VK_F12,         ID_FREEZE,              VIRTKEY, CONTROL, NOINVERT
+    VK_SUBTRACT,    ID_DECREASE_TRANSPARENCY, VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About ECQ Alarm Clock..."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ONLINE_HELP         "http://www.ecq.name"
+    IDS_MAILTO              "mailto:brygid@163.com"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "afxres.rc"         // Standard components
+#endif
+#ifdef _VC60
+/////////////////////////////////////////////////////////////////////////////
+//
+// 24
+//
+1                      24      MOVEABLE PURE   "app.manifest"
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
